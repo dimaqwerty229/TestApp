@@ -32,7 +32,6 @@ namespace WpfApp1
                                              "Question",
                                              MessageBoxButton.YesNo);
 
-            // User doesn't want to close, cancel closure
             if (result == MessageBoxResult.Yes)
             {
                 this.Close();

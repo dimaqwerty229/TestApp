@@ -14,11 +14,10 @@
                        Margin="0,0,0,20"/>
             <StackPanel Orientation="Horizontal"
                         Margin="0,0,0,10">
-                <Border Height="400"
-                        Width="800">
-                    
-                </Border>
-                
+                <Grid>
+                    <Border Height="400"
+                        Width="800"/>
+                </Grid>
                 
             </StackPanel>
         </StackPanel>

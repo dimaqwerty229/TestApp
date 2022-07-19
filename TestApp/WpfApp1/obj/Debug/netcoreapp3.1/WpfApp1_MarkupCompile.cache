@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\тестовое задание\TestApp\WpfApp1\obj\Debug\netcoreapp3.1\
+D:\тестовое задание\TestApp\TestApp\WpfApp1\obj\Debug\netcoreapp3.1\
 WpfApp1
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
-D:\тестовое задание\TestApp\WpfApp1\App.xaml
+D:\тестовое задание\TestApp\TestApp\WpfApp1\App.xaml
 3-1531558016
 
 5-29899909
 192-1533232326
 MainWindow.xaml;Theme\MenuButtonTheme.xaml;Theme\TextBoxTheme.xaml;
 
-False
+True
 
