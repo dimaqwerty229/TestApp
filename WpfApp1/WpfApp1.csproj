@@ -8,8 +8,11 @@
 
   <ItemGroup>
     <Folder Include="MVVM\Model\" />
-    <Folder Include="MVVM\View\" />
-    <Folder Include="MVVM\ViewModel\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CoinGeckoAsyncApi" Version="1.7.0" />
+    <PackageReference Include="VisioForge.DotNet.Core.TRIAL" Version="15.1.12" />
   </ItemGroup>
 
 </Project>

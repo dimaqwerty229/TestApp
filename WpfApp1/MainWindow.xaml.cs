@@ -20,9 +20,24 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Exit_click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("Do you have exit?",
+                                             "Question",
+                                             MessageBoxButton.YesNo);
+
+            // User doesn't want to close, cancel closure
+            if (result == MessageBoxResult.Yes)
+            {
+                this.Close();
+            }
+                
         }
     }
 }

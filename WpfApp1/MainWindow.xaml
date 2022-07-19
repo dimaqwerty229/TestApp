@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:viewModel="clr-namespace:WpfApp1.MVVM.ViewModel"
         mc:Ignorable="d"
         Height="600" Width="920"
         WindowStyle="None"
@@ -11,6 +12,9 @@
         Background="Transparent"
         AllowsTransparency="True">
 
+    <Window.DataContext>
+        <viewModel:MainViewModel/>
+    </Window.DataContext>
     <Border Background="#272537"
             CornerRadius="20">
         <Grid>
@@ -36,19 +40,31 @@
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             IsChecked="True"
+                             Command="{Binding HomeViewCommand}"/>
                 
                 <RadioButton Content="Currency"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
-                             Style="{StaticResource MenuButtonTheme}"/>
+                             Style="{StaticResource MenuButtonTheme}"
+                             Command="{Binding CurrencyViewCommand}"/>
                 
                 <RadioButton Content="Search"
                              Height="50"
                              Foreground="White"
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"/>
+                
+                <RadioButton x:Name="Exit" Content="Exit"
+                             Height="50"
+                             Foreground="White"
+                             FontSize="14"
+                             Style="{StaticResource MenuButtonTheme}"
+                             AutomationProperties.Name="Exit" Click="Exit_click"/>
+
+
             </StackPanel>
 
             <TextBox Width="250"
@@ -59,6 +75,10 @@
                      Grid.Column="1"
                      Style="{StaticResource ModernTextBox}"/>
 
+            <ContentControl Grid.Row="1"
+                            Grid.Column="1"
+                            Margin="10"
+                            Content="{Binding CurrentView}"/>
 
         </Grid>
     </Border>
